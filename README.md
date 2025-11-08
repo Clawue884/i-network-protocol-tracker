@@ -1,159 +1,152 @@
 
-# 🛰️ Pi Network Protocol Tracker
+---
 
-**Pi Network Protocol Tracker** adalah alat open-source berbasis Python yang memantau status *real-time* dari jaringan **Pi Testnet2** dan **Mainnet** melalui **Horizon API resmi**.  
-Proyek ini memungkinkan pengembang dan komunitas Pi untuk melacak:
-- Versi protokol (`v19`, `v23`, dst)
-- Versi Stellar-Core dan Horizon
-- Aktivitas ledger terbaru
-- Sinkronisasi node secara langsung
-- Visualisasi data jaringan (grafik waktu nyata)
+# 🛰️ Pi Testnet2 Tracker
+
+**Pi Testnet2 Tracker** adalah alat sederhana berbasis Python untuk memantau status jaringan **Pi Testnet2 (Horizon API)** secara *real-time*.  
+Proyek ini membantu pengembang dan komunitas Pioneer melacak kemajuan jaringan, versi protokol, dan status upgrade menuju **Mainnet v23** dengan akurat tanpa harus bergantung pada rumor atau sumber tidak resmi.
 
 ---
 
 ## 🚀 Fitur Utama
 
-✅ **Pemantauan langsung** versi protokol dari jaringan Pi Network  
-📡 **Koneksi langsung** ke endpoint Horizon API resmi (`https://api.testnet2.minepi.com/`)  
-📈 **Grafik interaktif** ledger & perubahan versi (menggunakan Matplotlib)  
-⚙️ **Dapat dikonfigurasi** untuk Testnet atau Mainnet  
-🧠 **Mudah diperluas** — bisa diintegrasikan dengan dashboard web, Telegram bot, atau sistem notifikasi
+- 🔄 Memeriksa status *Horizon API* Testnet2
+- ⚙️ Menampilkan versi *core*, *horizon*, dan *protocol*
+- 🧭 Memantau nomor *ledger* terbaru dan waktu pembaruannya
+- 🛡️ Validasi jaringan dan *network passphrase* (Testnet/Mainnet)
+- 🕒 Output status real-time langsung dari endpoint API resmi Pi
 
 ---
 
-## 🧩 Arsitektur Sederhana
+## 🧩 Teknologi yang Digunakan
 
-┌────────────────────────────────┐ │ Horizon API (Pi Testnet/Mainnet)│ └──────────────┬─────────────────┘ │ JSON Data ▼ [ pi_network_tracker.py ] │ ▼ Ledger Graph  ←→  Protocol Graph
-
----
-
-## 🧠 Prasyarat
-
-Pastikan Python 3.8+ sudah terinstal di sistem kamu.
-
-### Instalasi Dependensi
-```bash
-pip install requests matplotlib
-
+- **Python 3.9+**
+- **Requests** (untuk HTTP API)
+- **JSON** (untuk parsing data)
+- **Command-line interface (CLI)**
 
 ---
 
-⚙️ Cara Menjalankan
+## 📦 Instalasi
 
-1. Clone repositori ini
+1. **Klon repositori ini:**
+   ```bash
+   git clone https://github.com/<username>/pi-testnet2-tracker.git
+   cd pi-testnet2-tracker
 
-git clone https://github.com/<username>/pi-network-protocol-tracker.git
-cd pi-network-protocol-tracker
+2. Buat virtual environment (opsional tapi disarankan):
 
-
-2. Jalankan script utama
-
-python pi_network_tracker.py
-
-
-3. Lihat hasilnya
-
-Data status jaringan akan muncul di terminal (CLI)
-
-Dua grafik akan terbuka otomatis:
-
-📈 Ledger Height (aktivitas jaringan)
-
-🔸 Protocol Version (perubahan versi)
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
 
 
+3. Instal dependensi:
+
+pip install -r requirements.txt
 
 
 
 
 ---
 
-🧭 Contoh Output
+⚙️ Penggunaan
 
-Terminal
+Jalankan perintah berikut di terminal:
 
-🔗 Jaringan: Pi Testnet
-🌍 URL: https://api.testnet2.minepi.com
------------------------------------------------
-📘 Horizon Version: 2.23.1
-⚙️ Core Version: stellar-core 19.6.0
-📡 Current Protocol Version: 19
-🕓 Latest Ledger: 6157217
-📅 Closed At: 2025-11-07T00:47:04Z
-✅ Node Sinkron & Aktif
+python pi_testnet_tracker.py
 
-Grafik
+Contoh output:
 
-Grafik 1: Ledger Height (menunjukkan aktivitas blockchain)
+🌐 Pi Testnet2 Network Status
+---------------------------------
+✅ Horizon Version: 2.23.1
+✅ Core Version: stellar-core 19.6.0
+✅ Current Protocol: 19
+✅ Supported Protocol: 19
+✅ Latest Ledger: 6157217
+✅ Last Closed: 2025-11-07T00:47:04Z
+🪐 Network Passphrase: Pi Testnet
+---------------------------------
+📊 Status: STABLE - Awaiting upgrade to v23
 
-Grafik 2: Protocol Version (akan berubah saat upgrade ke v23)
+
+---
+
+🧠 Tujuan Proyek
+
+Proyek ini dibuat untuk:
+
+Memberikan transparansi pada kemajuan teknis jaringan Pi Testnet2.
+
+Membantu pengembang Node, App Developers, dan Pioneers memahami kapan sistem siap untuk Open Mainnet v23.
+
+Menjadi sumber data resmi yang otomatis dan netral.
 
 
 
 ---
 
-🔄 Konfigurasi Jaringan
+🗓️ Roadmap
 
-Ubah jaringan dari Testnet ke Mainnet di dalam kode:
+Tahap	Deskripsi	Status
 
-NETWORK = "mainnet"  # default: testnet2
-
-
----
-
-💡 Rencana Pengembangan
-
-[ ] Notifikasi otomatis saat protokol berubah (email / Telegram)
-
-[ ] Penyimpanan data historis (SQLite / CSV)
-
-[ ] Dashboard web interaktif (Flask / React)
-
-[ ] Integrasi AI untuk deteksi anomali jaringan
+v1.0	Tracker status Testnet2	✅ Selesai
+v1.1	Tambahkan notifikasi upgrade otomatis	⏳ Dalam pengembangan
+v2.0	Integrasi pelacakan Mainnet langsung	🧪 Eksperimen
 
 
 
 ---
 
-🧑‍💻 Kontribusi
+🛠️ Kontribusi
 
-Kontribusi sangat diterima!
-Silakan fork repositori ini dan buat pull request untuk fitur tambahan atau perbaikan bug.
+Kontribusi terbuka untuk semua Pioneers!
+Jika kamu ingin menambahkan fitur baru atau memperbaiki bug:
 
-Langkah umum:
-
-git checkout -b fitur-baru
-git commit -m "Menambahkan fitur notifikasi"
-git push origin fitur-baru
+1. Fork repositori ini
 
 
----
-
-🛡️ Lisensi
-
-Proyek ini dirilis di bawah lisensi MIT License — bebas digunakan, dimodifikasi, dan dikembangkan dengan menyertakan atribusi ke pembuat asli.
+2. Buat branch baru: git checkout -b fitur-baru
 
 
----
+3. Lakukan perubahan dan commit: git commit -m "Tambah fitur baru"
 
-🌐 Kredit & Referensi
 
-Pi Network Official Site
+4. Kirim pull request ke branch main
 
-Horizon API Documentation
-
-Stellar Core Protocol
-
-Matplotlib
 
 
 
 ---
 
-> 🪐 Developed with ❤️ for the global Pi Network community.
-Stay patient, stay building — the Open Mainnet will come when the ecosystem is ready. 🚀
+📜 Lisensi
+
+Proyek ini dirilis di bawah MIT License.
+Silakan gunakan, ubah, dan bagikan dengan tetap mencantumkan atribusi ke pengembang asli.
+
+
+---
+
+💫 Dibangun untuk Komunitas Pi Network
+
+> “Transparency, Technology, and Trust — one ledger at a time.”
+— Clawue Gabus (Developer & Pioneer)
+
 
 
 
 ---
 
+🌍 API Resmi yang Digunakan
+
+Pi Testnet2 Horizon API:
+https://api.testnet2.minepi.com/
+
+
+
+---
+
+#PiNetwork #Blockchain #Testnet2 #OpenMainnet #PiDevelopers #Python #DeFi #Web3
+
+---
