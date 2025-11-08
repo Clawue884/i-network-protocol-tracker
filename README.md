@@ -157,4 +157,3 @@ Stay patient, stay building — the Open Mainnet will come when the ecosystem is
 
 ---
 
-Apakah kamu mau saya bantu sekalian buatkan **struktur folder GitHub lengkap (kode + readme + license + .gitignore)** supaya kamu tinggal `git push` saja ke repositori barumu `pi-network-protocol-tracker`?
