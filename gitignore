@@ -1,13 +1,6 @@
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Virtual environment
-venv/
-.env/
-
-# VSCode / IDE
-.vscode/
-.idea/
+git init
+git add .
+git commit -m "Initial commit: Pi Testnet2 Tracker v1.0"
+git branch -M main
+git remote add origin https://github.com/<username>/pi-testnet2-tracker.git
+git push -u origin main
