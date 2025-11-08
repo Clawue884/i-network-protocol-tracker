@@ -131,7 +131,7 @@ Silakan gunakan, ubah, dan bagikan dengan tetap mencantumkan atribusi ke pengemb
 💫 Dibangun untuk Komunitas Pi Network
 
 > “Transparency, Technology, and Trust — one ledger at a time.”
-— Clawue Gabus (Developer & Pioneer)
+— Clawue dapuraset (Developer & Pioneer)
 
 
 
