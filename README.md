@@ -1,40 +1,45 @@
 
+🛰️ Pi Testnet2 Tracker  
+
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
+[![Status](https://img.shields.io/badge/Pi%20Protocol-v19-orange)](https://api.testnet2.minepi.com)
+[![Network](https://img.shields.io/badge/Network-Pi%20Testnet2-lightblue)](https://minepi.com)
+
 ---
 
-# 🛰️ Pi Testnet2 Tracker
-
-**Pi Testnet2 Tracker** adalah alat sederhana berbasis Python untuk memantau status jaringan **Pi Testnet2 (Horizon API)** secara *real-time*.  
-Proyek ini membantu pengembang dan komunitas Pioneer melacak kemajuan jaringan, versi protokol, dan status upgrade menuju **Mainnet v23** dengan akurat tanpa harus bergantung pada rumor atau sumber tidak resmi.
+**Pi Testnet2 Tracker** adalah alat berbasis Python untuk memantau status jaringan **Pi Testnet2 (Horizon API)** secara *real-time*.  
+Proyek ini membantu pengembang dan komunitas Pioneer melacak kemajuan jaringan, versi protokol, dan status upgrade menuju **Open Mainnet v23** dengan akurat tanpa harus bergantung pada rumor.
 
 ---
 
 ## 🚀 Fitur Utama
 
-- 🔄 Memeriksa status *Horizon API* Testnet2
-- ⚙️ Menampilkan versi *core*, *horizon*, dan *protocol*
-- 🧭 Memantau nomor *ledger* terbaru dan waktu pembaruannya
-- 🛡️ Validasi jaringan dan *network passphrase* (Testnet/Mainnet)
-- 🕒 Output status real-time langsung dari endpoint API resmi Pi
+- 🔄 Memeriksa status *Horizon API* Testnet2  
+- ⚙️ Menampilkan versi *core*, *horizon*, dan *protocol*  
+- 🧭 Memantau nomor *ledger* terbaru dan waktu pembaruannya  
+- 🛡️ Validasi jaringan dan *network passphrase*  
+- 🕒 Pembaruan real-time setiap 1 menit  
 
 ---
 
 ## 🧩 Teknologi yang Digunakan
 
-- **Python 3.9+**
-- **Requests** (untuk HTTP API)
-- **JSON** (untuk parsing data)
-- **Command-line interface (CLI)**
+- **Python 3.9+**  
+- **Requests** (untuk HTTP API)  
+- **Colorama** (untuk tampilan warna di CLI)
 
 ---
 
 ## 📦 Instalasi
 
-1. **Klon repositori ini:**
+1. **Klon repositori:**
    ```bash
    git clone https://github.com/<username>/pi-testnet2-tracker.git
    cd pi-testnet2-tracker
 
-2. Buat virtual environment (opsional tapi disarankan):
+2. Buat environment (opsional):
 
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
@@ -68,7 +73,7 @@ Contoh output:
 ✅ Last Closed: 2025-11-07T00:47:04Z
 🪐 Network Passphrase: Pi Testnet
 ---------------------------------
-📊 Status: STABLE - Awaiting upgrade to v23
+📊 Status: 🕓 Testnet masih di v19 - menunggu upgrade ke v23
 
 
 ---
@@ -77,11 +82,11 @@ Contoh output:
 
 Proyek ini dibuat untuk:
 
-Memberikan transparansi pada kemajuan teknis jaringan Pi Testnet2.
+Memberikan transparansi teknis bagi komunitas Pi Network
 
-Membantu pengembang Node, App Developers, dan Pioneers memahami kapan sistem siap untuk Open Mainnet v23.
+Membantu pengembang memantau kemajuan jaringan Testnet2
 
-Menjadi sumber data resmi yang otomatis dan netral.
+Menjadi dasar integrasi ke sistem pemantauan Mainnet v23
 
 
 
@@ -92,7 +97,7 @@ Menjadi sumber data resmi yang otomatis dan netral.
 Tahap	Deskripsi	Status
 
 v1.0	Tracker status Testnet2	✅ Selesai
-v1.1	Tambahkan notifikasi upgrade otomatis	⏳ Dalam pengembangan
+v1.1	Notifikasi upgrade otomatis ke Telegram/Discord	🔧 Dalam pengembangan
 v2.0	Integrasi pelacakan Mainnet langsung	🧪 Eksperimen
 
 
@@ -102,20 +107,13 @@ v2.0	Integrasi pelacakan Mainnet langsung	🧪 Eksperimen
 🛠️ Kontribusi
 
 Kontribusi terbuka untuk semua Pioneers!
-Jika kamu ingin menambahkan fitur baru atau memperbaiki bug:
+Langkahnya:
 
-1. Fork repositori ini
+git checkout -b fitur-baru
+git commit -m "Tambah fitur baru"
+git push origin fitur-baru
 
-
-2. Buat branch baru: git checkout -b fitur-baru
-
-
-3. Lakukan perubahan dan commit: git commit -m "Tambah fitur baru"
-
-
-4. Kirim pull request ke branch main
-
-
+Lalu buat Pull Request ke branch main.
 
 
 ---
@@ -123,7 +121,7 @@ Jika kamu ingin menambahkan fitur baru atau memperbaiki bug:
 📜 Lisensi
 
 Proyek ini dirilis di bawah MIT License.
-Silakan gunakan, ubah, dan bagikan dengan tetap mencantumkan atribusi ke pengembang asli.
+Silakan gunakan, ubah, dan distribusikan dengan tetap mencantumkan atribusi ke pengembang asli.
 
 
 ---
@@ -131,22 +129,22 @@ Silakan gunakan, ubah, dan bagikan dengan tetap mencantumkan atribusi ke pengemb
 💫 Dibangun untuk Komunitas Pi Network
 
 > “Transparency, Technology, and Trust — one ledger at a time.”
-— Clawue dapuraset (Developer & Pioneer)
+— Clawue Gabus (Developer & Pioneer)
 
 
 
 
 ---
 
-🌍 API Resmi yang Digunakan
+🌍 API Resmi
 
 Pi Testnet2 Horizon API:
-https://api.testnet2.minepi.com/
+https://api.testnet2.minepi.com
 
 
 
 ---
 
-#PiNetwork #Blockchain #Testnet2 #OpenMainnet #PiDevelopers #Python #DeFi #Web3
+#PiNetwork #Blockchain #Testnet2 #OpenMainnet #Python #DeFi #Web3 #Decentralization #HorizonAPI
 
 ---
